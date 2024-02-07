@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy new year for you</title>
+
+  <link rel="shortcut icon" type="image/gif" href="https://img.icons8.com/?size=256&id=azdb7D9htkdD&format=png">
+
+  <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      font-family: 'Protest Riot', cursive;
+    }
+
+    body {
+      background-color: #9b070f;
+    }
+
+    .envelope {
+
+      width: 200px;
+      height: 200px;
+      background-image: url('https://pngimg.com/uploads/envelope/envelope_PNG18366.png');
+      background-size: cover;
+      background-position: center;
+
+      margin: 200px auto 0px auto;
+
+      cursor: pointer;
+    }
+
+    .envelope-msg {
+      color: white;
+      text-align: center;
+    }
+
+    .letter-close {
+      display: block;
+    }
+
+    .letter-open {
+      display: none;
+    }
+
+    .rtan {
+      background-color: white;
+
+      width: 200px;
+      height: 200px;
+
+      background-image: url('https://cdn.lowgif.com/medium/ce13a8214a72ee40-cute-transparent-gif-find-download-on-gifer.gif');
+      background-size: cover;
+      background-position: center;
+
+      margin: 100px auto 0px auto;
+
+      border-radius: 100px;
+
+      border: 5px solid white;
+      box-shadow: 0px 0px 10px 10px rgb(12, 185, 70);
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+      font-size: 50px;
+
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .messagebox {
+      background-color: ivory;
+
+      width: 500px;
+      margin: auto;
+
+      color: rgb(8, 71, 25);
+
+      padding: 30px;
+
+      font-size: 30px;
+      line-height: 35px;
+
+      border: 5px solid rgb(255, 255, 255);
+      box-shadow: 0px 0px 10px 10px rgb(231, 152, 152);
+    }
+
+    .from {
+      text-align: right;
+      margin-bottom: 0px;
+    }
+
+    @media screen and (max-width: 760px) {
+      .messagebox {
+        font-size: 20px;
+        width: 300px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .rtan {
+        width: 150px;
+        height: 150px;
+
+        margin: 50px auto 0px auto;
+        border: 5px solid white;
+        box-shadow: 0px 0px 10px 5px rgb(12, 185, 70);
+      }
+
+      .envelope {
+        margin: 200px auto 0px auto;
+      }
+  </style>
+
+  <script>
+
+    function open_letter() {
+    // Tắt phần tử có lớp "letter-close"
+    document.getElementsByClassName("letter-close")[0].style.display = 'none';
+    // Hiển thị phần tử có lớp "letter-open"
+    document.getElementsByClassName("letter-open")[0].style.display = 'block';
+
+    var audio1 = new Audio('Chúc mừng năm mới Nguyễn Hoàng Trang Linh.mp3');
+    var audio2 = new Audio('Y2meta.app - Nhism cover Happy new year cực cuốn -@Nhism (128 kbps).mp3');
+
+    // Phát audio thứ nhất
+    audio1.play();
+
+    // Khi audio thứ nhất kết thúc, phát audio thứ hai
+    audio1.onended = function() {
+        console.log('Âm thanh thứ nhất đã kết thúc. Đang phát audio thứ hai.');
+        audio2.play();
+    };
+}
+
+    function go_rtan() {
+      alert('Bấm vào đây nữaaaaaa')
+      window.open('https://www.facebook.com/ducminhtoiday/', '');
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="letter-close">
+    <div class="envelope" onclick="open_letter()"></div>
+    <h2 class="envelope-msg">Bấm vào điiiiiiiii</h2>
+  </div>
+
+  <div class="letter-open">
+    <div class="rtan" onclick="go_rtan()"></div>
+    <h1> Goodbye 2023 </h1>
+
+    <div class="messagebox">
+      Happy new year 2024 <br />
+      NGUYỄN HOÀNG TRANG LINH <br />
+      Chúc bé năm mới có thật nhìu sức khỏe , nhìu tiền :)) <br />
+      Sẽ có thật nhiều niềm vui mới , nhiều trải nghiệm mới <br />
+      Sẽ cùng hoạt động với anh trong ban Văn Hóa của Melody <br />
+      fa63cbaba302190587b2dd4de1b90933♥<br /><br />
+
+      <p class="from">8/2/2024 ♥</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
